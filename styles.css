@@ -1,0 +1,26 @@
+html{
+  height:100%
+}
+
+
+h1 {color:plum}
+
+
+.content {
+  width: 80vw;
+  height:auto;
+  margin:3rem auto;
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  background-image: linear-gradient(176deg, rgba(48, 53, 97, 1), rgba(194, 57, 248, 1));
+
+  };
+
+  
+
+
+
+
