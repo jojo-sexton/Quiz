@@ -12,3 +12,4 @@ const ul = document.querySelector('.content > ul')
 pathetics.forEach (p => {
   ul.innerHTML += `<li>${p}</li>`
 })
+
