@@ -82,3 +82,32 @@ people.forEach((person, index) => {
 )
 ul.innerHTML = HTML
 
+// CREATE AN OBJECT USER AND INSIDE THAT OBJECT, CREATE  A FUNCTION THAT PRINTOUT TITLES OF ALL BLOGS WRITTEN BY THAT PERSON
+
+const user = {
+  name: "Princess Peach",
+  blogs: ["Why mac and cheese rules", "10 things to make with marmite"],
+  printBlogs(){
+    console.log(`These blogs are written by ${this.name}:`)
+  
+    this.blogs.forEach(
+      blog => console.log(blog)
+    )
+  }
+}
+
+user.printBlogs()
+
+// CREATE A FUNCTION THAT RANDOMLY GENERATE RANDOM NUMBER FROM 1 TO 1000
+const random = Math.random()
+const random1000 = Math.round(random*1000)
+console.log(random1000)
+
+// Primitive v.s referrence 
+
+let number1 = 30
+number2 = number1
+console.log(`number 1 is ${number1}; number 2 is ${number2}`)
+number1 = 40;
+console.log(`number 1 is ${number1}; number 2 is ${number2}`)
+
