@@ -6,11 +6,21 @@ html{
 h1 {color:plum}
 
 
+
 .content {
   width: 80vw;
   height:auto;
   margin:3rem auto;
   text-align: center;
+}
+
+
+.pathetic{
+ color:lightseagreen;
+  list-style-type: none;
+  display:flex;
+  justify-content: space-around;
+ 
 }
 
 body {
