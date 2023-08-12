@@ -13,3 +13,26 @@ pathetics.forEach (p => {
   ul.innerHTML += `<li>${p}</li>`
 })
 
+// Get all the children of the div content, this will return a HTML collection
+
+const content = document.querySelector('.content')
+const children = content.children
+console.log(children)
+
+// convert HTMLcollection into an array
+const array = Array.from(children)
+console.log(array)
+
+// get the parents of ul 
+const parents = ul.parentElement
+console.log(parents)
+
+// chaining: get grandparents of ul
+const grandparents = ul.parentElement.parentElement
+console.log(grandparents)
+
+// get the sibling next to ul
+const nextSib = ul.nextElementSibling
+console.log(nextSib)
+
+

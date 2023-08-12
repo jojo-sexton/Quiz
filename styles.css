@@ -12,11 +12,12 @@ h1 {color:plum}
   height:auto;
   margin:3rem auto;
   text-align: center;
+  color:lightseagreen;
 }
 
 
 .pathetic{
- color:lightseagreen;
+ 
   list-style-type: none;
   display:flex;
   justify-content: space-around;
