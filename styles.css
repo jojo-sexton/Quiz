@@ -1,13 +1,28 @@
-html{
-  height:100%
+body{
+  height: 100vh;
+
+  font-family: system-ui;
 }
 
 
 h1 {color:plum}
 
+a {
+  text-decoration: none;
+  font-family: cursive;
+  color: whitesmoke
+}
 
 
-.content {
+ 
+.unfortunate {
+  width: 80vw;
+  height:auto;
+  margin:3rem auto;
+  text-align: center;
+}
+
+.excellent {
   width: 80vw;
   height:auto;
   margin:3rem auto;
@@ -22,6 +37,8 @@ h1 {color:plum}
   justify-content: space-around;
  
 }
+
+
 
 body {
   width: 100%;
