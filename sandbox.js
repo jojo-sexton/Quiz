@@ -1,24 +1,35 @@
 const form = document.querySelector('form')
 const feedback = document.querySelector('.feedback')
+const username = form.userName //can grab user name by using the dot notation like form."name=userName"
+const pattern = /^[a-z]{6,}$/
 
+
+username.addEventListener('keyup', e => {
+  const result = pattern.test(e.target.value)
+  if (result) {
+    username.setAttribute('class','success')
+  } else {
+    username.setAttribute('class','error')
+  }
+})
 
 // console log the username that is input by user, the user name must contain atleast 6 characters, lower case with no special character
 form.addEventListener('submit', e =>{
   e.preventDefault()
 
-
   // validation:
-  const username = form.userName.value
-  const pattern = /^[a-z]{6,}$/
+  const username = e.target.value
   const result = pattern.test(username)
 
-  
   if (result){
     feedback.textContent='That username is valid'
   } else {
     feedback.textContent='The user name must be at least 6 characters long, lower case with no special character '
   }
 })
+
+// live validation: useing keyup event, as soon as the user starts to to type, start regex testing, if failed, apply a class error to change the username border to red and vice versa if success, apply class success to change the username border to green using form.userName.settAttribute('class','error/success')
+
 
 
 // // Testing the RegEx:  at least 6 letters, lower case, no special character

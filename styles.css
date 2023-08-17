@@ -17,3 +17,12 @@ input{
   margin: 1rem auto;
 
 }
+
+.error{
+  border: crimson solid 5px
+}
+
+.success{
+  border: lime solid 6px
+}
+
