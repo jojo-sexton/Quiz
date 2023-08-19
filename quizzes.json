@@ -1,0 +1,42 @@
+[{"id":"q1",
+  "question": "A portrait that comically exaggerates a person's physical traits is called a what?",
+  "A": "landscape",
+  "B": "caricature",
+  "C": "still life",
+  "D": "Impressionism",
+  "answer": "B"
+},{
+  "id":"q2",
+  "question": "Ada Lovelace is credited with being the first person to have made what?",
+  "A": "a computer program",
+  "B": "a souffle",
+  "C": "a brassiere",
+  "D": "a mystery novel",
+  "answer": "A"
+},{
+  "id":"q3",
+  "question": "An airplane's black box is usually what color?",
+  "A": "black",
+  "B": "white",
+  "C": "orange",
+  "D": "purple",
+  "answer": "C"
+},{
+  "id":"q4",
+  "question": "In Greek mythology, what is the name of Zeus' father?",
+  "A": "Apollo",
+  "B": "Cronus",
+  "C": "Prometheus",
+  "D": "Hercules",
+  "answer": "B"
+},{
+  "id":"q5",
+  "question": "What was the original name of the Apple Macintosh XL computer?",
+  "A": "Lisa 2",
+  "B": "Mac Daddy",
+  "C": "Granny Smith",
+  "D": "Orange XL",
+  "answer": "A"
+}
+
+]
