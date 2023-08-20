@@ -1,113 +1,61 @@
+const numbers = [10, 20, 30, 50, 70, 90]
+console.log(`Numbers array [${numbers}]`)
+
+//<---------------------------------->
+
+// FILTER returns a new array that matches criteria
+const under50 = numbers.filter((n) => n < 50)
+console.log(`These are the numbers that under 50: ${under50}`)
+
+const users = [
+  { name: 'mario', premium: true },
+  { name: 'luigi', premium: false },
+  { name: 'toad', premium: true },
+  { name: 'princess peach', premium: false },
+]
+
+const premiums = users.filter((user) => {
+  return user.premium //return the value if "user.premium is true"
+})
+console.log(`People that have premium memberships:`,  premiums)
 
 
 
-greet()
+//<---------------------------------->
 
-// Function expression - HOISTING IN ORDER
-const speak = function (name = 'Groot', age = 3) {
-  console.log(`I am ${name} and I am ${age} years old`)
-}
+//REDUCE: return a single accumulated value. it iterates thru each item in the array and start accumulating/adding/counting if that item meet certain criteria
 
-speak(9)
-
-// Function declaration - ALWAYS HOISTING FIRST EVEN DECLARE AT THE BOTTOM - NOT PREFERED
-function greet (){
-  console.log('Greeting!')
-}
-
-
-// Regular function
-// const calcArea = function (radius) {
-//   const area = radius * 3.14 ** 2
-//   return area
-  
-// }
-
-// Arrow function 
-
-const calcArea = radius => radius * 3.14 ** 2 
-
-
-const area = calcArea(5)
-console.log(area)
-
-
-const returnANote = (note) => `This is my note: ${note}`
-
-
-const myNote = returnANote(`manamana`)
-console.log (myNote)
-
-
-// create arrow function to calculate a bills to pay + tax
-
-// const bill = (products, tax) => {
-//   let total = 0;
-//   for (i = 0; i < products.length; i++) {
-    
-//     total += products[i] + products[i] * tax;
-
-//   }
-//   return total
-
-// }
-
-
-
-// create a normal function to calcualte a bill to pay + tax
-
-function bill (products, tax) {
-  let total = 0
-  for (i = 0; i < products.length; i=i+1) {
-    // total = total + products[i] + products[i] * tax;
-    total += products[i] + products[i]  * tax;
+//Example 1: look at the numbers array at the top, count how many numbers in that array that is higher than 50.
+const over50 = numbers.reduce((accumulated, current) => {
+  if (current > 50) {
+    accumulated++
   }
+  return accumulated++ //return outside if
+}, 0)
+console.log(`There are ${over50} numbers over 50 in the numbers array`)
 
-  return total
-}
+//Example 2: find total score of Mario 
+//acc is the total score starting at 0
+const scores = [
+  { name: 'mario', score: 30 },
+  { name: 'luigi', score: 40 },
+  { name: 'mario', score: 50 },
+  { name: 'princess peach', score: 60 },
+]
 
-console.log(`Total bill is $${bill([10,20,50], 0.5)}`)
-
-// create a unordered list in HTML
-
-const ul = document.querySelector('.people')
-const people =["ariel", "elsa", "anna", "belle", "aurora"]
-let HTML = ``
-people.forEach((person, index) => {
-  // Create HTML template
-  HTML += `<li style=" color: hotpink ">${index} ${person} </Li>`
-
-}
-
-)
-ul.innerHTML = HTML
-
-// CREATE AN OBJECT USER AND INSIDE THAT OBJECT, CREATE  A FUNCTION THAT PRINTOUT TITLES OF ALL BLOGS WRITTEN BY THAT PERSON
-
-const user = {
-  name: "Princess Peach",
-  blogs: ["Why mac and cheese rules", "10 things to make with marmite"],
-  printBlogs(){
-    console.log(`These blogs are written by ${this.name}:`)
-  
-    this.blogs.forEach(
-      blog => console.log(blog)
-    )
+const marioscores = scores.reduce((acc, score)=>{
+  if (score.name === "mario") {
+    acc += score.score
   }
-}
+  return acc //MAKE SURE RETURN OUTSIDE IF
+}, 0)
 
-user.printBlogs()
+console.log(`total scores of Mario is ${marioscores}`)
 
-// CREATE A FUNCTION THAT RANDOMLY GENERATE RANDOM NUMBER FROM 1 TO 1000
-const random = Math.random()
-const random1000 = Math.round(random*1000)
-console.log(random1000)
 
-// Primitive v.s referrence 
+//<---------------------------------->
 
-let number1 = 30
-number2 = number1
-console.log(`number 1 is ${number1}; number 2 is ${number2}`)
-number1 = 40;
-console.log(`number 1 is ${number1}; number 2 is ${number2}`)
-
+//FIND: ITTERATE THE ARRAY AN RETURN THE FIRST VALUE THAT MEET CRITERIA
+//example 1: find the first number that is over 50
+const firstover50 = numbers.find( number => number > 50 )
+console.log (`the first number in the array that is over 50 is ${firstover50}`)
