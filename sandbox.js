@@ -59,3 +59,22 @@ console.log(`total scores of Mario is ${marioscores}`)
 //example 1: find the first number that is over 50
 const firstover50 = numbers.find( number => number > 50 )
 console.log (`the first number in the array that is over 50 is ${firstover50}`)
+
+//SORT METHOD
+//sort the number using syntax numbers.sort((a, b) =>  a -b ) to sort from low to high and numbers.sort((a, b) =>  b - a  ) to sort from low to high
+numbers.sort((a,b) => a - b)
+console.log(`sort the numbers from small to big ${numbers}`)
+
+// //sort method explain: the sort itterates 2 elements next to each other in the array then compare them,  if you want a before b, then return -1, if you want a after b, return 1, if no change, return 0
+// numbers.sort((a,b) => {
+//   if (a > b){
+//     return 1
+//   } else if (a < b){
+//     return -1
+//   } else return 0
+// })
+
+//CHAINING ARRAY METHODS: AS LONG AS THE METHOD RETURNS AN ARRAY, WE CAN CHAIN ON THEM
+//from the scores array, filter out those that have the scores over 50 then output it to the html
+const highscores = scores.filter(s => s.score > 50).map(s => `${s.name} has a score of ${s.score}`)
+console.log(highscores)
