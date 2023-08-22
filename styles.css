@@ -1,0 +1,21 @@
+body{
+  background: #352f5b;
+}
+.container{
+  max-width: 400px;
+}
+input[type=text],
+input[type=text]:focus{
+  color: black;
+  border: none;
+  background: lightgray;
+  max-width: 400px;
+}
+.todos li{
+  background: #423a6f;
+}
+.delete{
+  cursor: pointer;
+}
+
+/* need to format the color of the place holder???? */
