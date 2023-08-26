@@ -18,4 +18,10 @@ input[type=text]:focus{
   cursor: pointer;
 }
 
-/* need to format the color of the place holder???? */
+ul {
+  list-style: none;
+}
+
+.filtered{
+  display: none !important
+}
