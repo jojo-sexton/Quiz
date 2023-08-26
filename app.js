@@ -32,11 +32,17 @@ addform.addEventListener('submit', e => {
   if (todo.length > 0) {
     //call functin creating template made above
     creatingtemplate(todo)
+    
   }
 
   //clear the form after user hits enter
   addform.reset()
-  
+
+   //Save to local storage
+  const saveTodosToLocalStorage = Array.from(list.children).map (todo => todo.innerText)
+  console.log(saveTodosToLocalStorage)
+  localStorage.setItem ('todos', JSON.stringify(saveTodosToLocalStorage))
+
 })
 
 //DELETE TODOS
@@ -45,6 +51,12 @@ addform.addEventListener('submit', e => {
 list.addEventListener('click', e => {
   if (e.target.classList.contains('delete')){
     e.target.parentElement.remove()
+
+    //Save to local storage
+  const saveTodosToLocalStorage = Array.from(list.children).map (todo => todo.innerText)
+  console.log(saveTodosToLocalStorage)
+  localStorage.setItem ('todos', JSON.stringify(saveTodosToLocalStorage))
+
   }
 })
 
@@ -70,4 +82,16 @@ search.addEventListener ('keyup', e => {
   const term = search.value.toLowerCase().trim()
   filtered(term)
 })
+
+//get the local storage if there is todos list is stored on it then generate a new todo list based on what is stored
+const storedLi = JSON.parse(localStorage.getItem('todos'))
+  .map(todo => 
+  `<li class="list-group-item d-flex justify-content-between align-items-center text-light"> <span>${todo}</span>
+  <i class="fa-solid fa-trash-can delete"></i>
+  </li>
+    `)
+  
+
+list.innerHTML = storedLi.join('')
+
 
