@@ -84,14 +84,15 @@ search.addEventListener ('keyup', e => {
 })
 
 //get the local storage if there is todos list is stored on it then generate a new todo list based on what is stored
+
+if(localStorage.getItem('todos')){
 const storedLi = JSON.parse(localStorage.getItem('todos'))
   .map(todo => 
   `<li class="list-group-item d-flex justify-content-between align-items-center text-light"> <span>${todo}</span>
   <i class="fa-solid fa-trash-can delete"></i>
   </li>
     `)
-  
 
 list.innerHTML = storedLi.join('')
-
+  }
 
