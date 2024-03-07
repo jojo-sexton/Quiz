@@ -1,7 +1,7 @@
 // FETCH API WITH ASYNC AWAIT
 // put async before the function to turn it into an async function which is non-blocking. This will return a promise. In order to get the data, we need to do .then outside of this function 
 const getquizzes = async () => {
-  const response = await fetch('./quizzes.json')
+  const response = await fetch('./quizzes2.json')
   const data = await response.json()
   return data
   // the data is a promise
