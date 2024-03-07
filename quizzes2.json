@@ -1,0 +1,42 @@
+[
+  {"id":"q1",
+    "question": "If money grew on trees, what type of tree would it be?",
+    "A": "Cashew tree",
+    "B": "Dollar tree",
+    "C": "Money tree",
+    "D": "Coin tree",
+    "answer": "C"
+  },
+  {"id":"q2",
+    "question": "What's a bank robber's favorite type of math?",
+    "A": "Addition",
+    "B": "Multiplication",
+    "C": "Subtraction",
+    "D": "Division",
+    "answer": "C"
+  },
+  {"id":"q3",
+    "question": "Why did the penny go to therapy?",
+    "A": "It felt undervalued",
+    "B": "It had a change of heart",
+    "C": "It was feeling nickel-and-dimed",
+    "D": "It wanted to make cents of its life",
+    "answer": "A"
+  },
+  {"id":"q4",
+    "question": "What did the dollar say to the quarter?",
+    "A": "You're just a small change.",
+    "B": "You're worth less than me.",
+    "C": "Stop giving me lip.",
+    "D": "You're not worth my two cents.",
+    "answer": "D"
+  },
+  {"id":"q5",
+    "question": "What's a rich person's favorite seafood?",
+    "A": "Goldfish",
+    "B": "Caviar",
+    "C": "Lobster",
+    "D": "Shrimps",
+    "answer": "A"
+  }
+]
